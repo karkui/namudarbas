@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for entry in entries %}
+        Person: {{ entry.user.name }}</br>
+            {% if entry.income == 1 %}
+                Income: {{ entry.sum }}
+            {% else %}
+                Expense: {{ entry.sum }}
+            {% endif %}</br>
+            Date: {{ entry.date }}</br>
+            <p>___________________________________</p>
+
+    {% else %}
+        <p>Nera ivesciu.</p>
+    {% endfor %}
+
+{% endblock content %}
